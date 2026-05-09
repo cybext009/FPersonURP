@@ -20,6 +20,8 @@ public class Arma : MonoBehaviour
 
     public void ProcesarEntrada(bool value)
     {
+        Debug.Log("2. El arma recibió la señal: " + value); // Esto confirmará que la conexión funciona
+
         if (puedeDisparar && value)
         {
             StartCoroutine(Disparar());
@@ -36,6 +38,8 @@ public class Arma : MonoBehaviour
 
     private void ProcesarRaycast()
     {
+        Debug.Log("RAYCAST");
+
         if (Physics.Raycast(cameraPrimeraPersona.position, CalcularDireccion(), out RaycastHit hit, rango, layerMask))
         {
             TrailRenderer trail = Instantiate(trailPrefab, origenProyectil.transform.position, Quaternion.identity);

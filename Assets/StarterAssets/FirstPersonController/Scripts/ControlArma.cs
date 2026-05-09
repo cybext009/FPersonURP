@@ -1,15 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Burst.Intrinsics;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.InputSystem; // Esto es vital
 
 public class ControlArma : MonoBehaviour
 {
-    [SerializeField] private Arma arma;
+    public Arma armaActual;
 
-    public void AlDisparar(InputAction.CallbackContext value)
+    // Fíjate bien en lo que está dentro de los paréntesis
+    public void AlDisparar(InputAction.CallbackContext context)
     {
-        arma.ProcesarEntrada(value.action.triggered);
+        if (context.started)
+        {
+            Debug.Log("1. Botón presionado. Llamando al arma...");
+
+            if (armaActual != null)
+            {
+                armaActual.ProcesarEntrada(true);
+            }
+        }
     }
 }
