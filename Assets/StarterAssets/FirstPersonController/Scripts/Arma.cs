@@ -93,6 +93,7 @@ public class Arma : MonoBehaviour
     {
         if (Physics.Raycast(cameraPrimeraPersona.position, direccion, out RaycastHit hit, rango, layerMask))
         {
+            Debug.Log("Golpeó: " + hit.transform.name);
             TrailRenderer trail = Instantiate(trailPrefab, origenProyectil.position, Quaternion.identity);
             StartCoroutine(MoverTrail(trail, hit));
 

@@ -1012,7 +1012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8279798545678494202, guid: f0271df749728104eac22c3d897fd8ce, type: 3}
       propertyPath: m_PointerBehavior
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0271df749728104eac22c3d897fd8ce, type: 3}
@@ -3712,12 +3712,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 5393215579111688473}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7318540e9808c941bdadcbc58db5f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  salud: {fileID: 5393215579111688480}
+  tiempoAntesReiniciar: 2
+--- !u!114 &5393215579111688480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5393215579111688473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80971163d3bd4de4ca5a42082c6156ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tiempoInmunidad: 1.5
-  saludMax: 10
-  destruirAlMorir: 0
+  saludMax: 3
+  destruirAlMorir: 1
   tiempoEnDestruirse: 0
   alPerderSalud:
     m_PersistentCalls:
