@@ -29,7 +29,17 @@ public class EstadoAtacar : EstadoBase
         }
         else
         {
-            Debug.Log("Atacar");
+            Salud saludObjetivo = enemigoME.TransformObjetivo.GetComponent<Salud>();
+
+            if (saludObjetivo != null)
+            {
+                saludObjetivo.PerderSalud(enemigoME.DanioAtaque);
+                Debug.Log("Daño realizado");
+            }
+            else
+            {
+                Debug.Log("El objetivo no tiene script Salud");
+            }
         }
     }
 

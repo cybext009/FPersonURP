@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class EnemigoME : MaquinaEstados
 {
     [SerializeField] private GameObject objetivo;
+    [SerializeField] private float danioAtaque = 1f;
     [SerializeField] private float rangoDeteccion = 5f;
     [SerializeField] private float velVoltearAVer = 5f;
     [SerializeField] private float tiempoAgresion = 5f;
@@ -22,6 +23,8 @@ public class EnemigoME : MaquinaEstados
     public float DistanciaAlObjetivo { get; private set; } = Mathf.Infinity;
 
     public float TiempoAgresion { get { return tiempoAgresion; } private set { } }
+
+    public float DanioAtaque { get { return danioAtaque; } private set { } }
 
     [NonSerialized] public float ContTiempoAgresion;
 

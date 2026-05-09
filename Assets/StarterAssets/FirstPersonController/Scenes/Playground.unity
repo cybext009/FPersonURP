@@ -1521,7 +1521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   armaActual: {fileID: 7469502797404679375}
---- !u!114 &5393215579111688478
+--- !u!114 &5393215579111688475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1530,9 +1530,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 5393215579111688473}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 579d9bd1cb73cf74fba64a428e3492e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 80971163d3bd4de4ca5a42082c6156ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tiempoInmunidad: 1.5
+  saludMax: 10
+  destruirAlMorir: 0
+  tiempoEnDestruirse: 0
+  alPerderSalud:
+    m_PersistentCalls:
+      m_Calls: []
+  alMorir:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &6340023380601669589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1647,6 +1657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objetivo: {fileID: 5393215579111688473}
+  danioAtaque: 1
   rangoDeteccion: 5
   velVoltearAVer: 5
   tiempoAgresion: 5
